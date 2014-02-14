@@ -1,0 +1,6 @@
+term urxvtc
+mask1 mod4
+altmask shift
+fn terminus:pixelsize9
+bg #000000
+fc #B8B8B8

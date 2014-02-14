@@ -1,6 +1,6 @@
 evilwm configs
 =====
 
-.evilwmrc_ivan_2014_0214: (short description goes here)
+.evilwmrc_ivan_2014_0214: simple config using super key and changed default bc and fg colors
 
 evilwm-mouse-patch:	switch button 3 to work as resize

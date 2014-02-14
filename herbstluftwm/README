@@ -4,13 +4,18 @@ herbstluftwm configs
 ### Herbsttluftwm is a manual tiling window manager.  The layout is based on splitting frames into subframes which can be split again or can be filled with windows  
 
 #### autostart_dkeg_20140213:
+* Alt=mod1  
+* Win=Mod4  
+* MOD=Mod1  
 * Name as autostart, place in ~/.config/herbstluftwm/  
 * Not far from a base config  
 * panel is commented out.  Remove the '#' if want to use.  
 * Alt-Enter for termial  
 * Win-p for dmenu  
-* Alt-Shift-q to exit  
+* Alt-Shift-q to exit
+* Alt-q quit application  
 * Alt-Shift- vol down  
 * Alt-Shift+ vol up  
+* Alt-Shift-F8 mute  
 
 

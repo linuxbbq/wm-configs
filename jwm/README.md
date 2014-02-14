@@ -1,4 +1,4 @@
-jwm configs
+jwm configurations
 ======
 
 .jwmrc-gray_pidsley_20140214		gray theme, with windecs and panel

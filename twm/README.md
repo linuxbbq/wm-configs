@@ -1,2 +1,5 @@
+twm configurations
+=====
+
 .twmrc-gray_pidsley_20140214	gray-themed .twmrc from Old School
 

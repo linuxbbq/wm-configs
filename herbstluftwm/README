@@ -1,4 +1,16 @@
 herbstluftwm configs
 =====
 
-autostart_dkeg_20140213: (short description goes here.)
+### Herbsttluftwm is a manual tiling window manager.  The layout is based on splitting frames into subframes which can be split again or can be filled with windows  
+
+#### autostart_dkeg_20140213:
+* Name as autostart, place in ~/.config/herbstluftwm/  
+* Not far from a base config  
+* panel is commented out.  Remove the '#' if want to use.  
+* Alt-Enter for termial  
+* Win-p for dmenu  
+* Alt-Shift-q to exit  
+* Alt-Shift- vol down  
+* Alt-Shift+ vol up  
+
+

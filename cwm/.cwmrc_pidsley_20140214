@@ -1,0 +1,15 @@
+# super simple cwm config file, mod4 bindings
+
+mousebind 4-3 window_resize
+mousebind 4-1 window_move
+mousebind 4-2 window_lower
+
+bind 4-t urxvt
+bind 4-p dmenu_run
+bind 4-Tab  cycle
+
+color activeborder blue
+borderwidth 1
+
+fontname "terminus:8"
+

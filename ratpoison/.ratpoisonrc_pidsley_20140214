@@ -1,0 +1,25 @@
+# basic ratpoison config, with separate keydef file
+
+# this file is provided with NO GUARANTEE and NO SUPPORT
+# if it does not do what you want, FIX IT YOURSELF
+
+exec rpws init 4 -a -k
+
+#set padding 0 15 0 0	# uncomment to leave room for one-line conky
+set font Mono-10 
+set bargravity nw
+startup_message off
+msgwait 2
+
+set bgcolor #000000
+set fgcolor #CCCCCC
+set bwcolor #272727
+set fwcolor #000077
+
+# load key definitions from a separate file
+# so these can be reloaded after changes
+# without restarting rp
+# must specify full path
+
+source /home/pidsley/.ratpoisonkeys
+

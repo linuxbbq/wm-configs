@@ -2,5 +2,8 @@ hcwm configurations
 =====
 
 config.h:       standard sane header, no edits
+                M^S^Return=term
+                M^S^w wmrestore
 martini.diff:   patch, as used in LinuxBBQ Martini
-
+                M^C^Return=term
+                M^C^w wmrestore

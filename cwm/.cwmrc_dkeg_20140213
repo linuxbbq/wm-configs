@@ -1,0 +1,154 @@
+## cwm config , dkeg 2013 ##
+
+
+## Default cwm keybindings
+
+#	CM-Return       Spawn a new terminal.
+#	CM-Delete       Lock the screen.
+#	M-Return        Hide current window.
+#	M-Down          Lower current window.
+#	M-Up            Raise current window.
+#	M-/             Search for windows.
+#	C-/             Search for applications.
+#	CM-n            Label current window.
+#	M-Tab           Cycle through currently visible windows.
+#	MS-Tab          Reverse cycle through currently visible windows.
+#	CM-x            Delete current window.
+#	CM-[n]          Select group n, where n is 1-9.
+#	CM-0            Select all groups.
+#	CM-g            Toggle group membership of current window.
+#	M-Right         Cycle through active groups.
+#	M-Left          Reverse cycle through active groups.
+#	CMS-f           Toggle freezing geometry of current window.
+#	CM-f            Toggle full-screen size of current window.
+#	CM-=            Toggle vertical maximization of current window.
+#	CMS-=           Toggle horizontal maximization of current window.
+#	M-?             Spawn “exec program” dialog.
+#	M-.             Spawn “ssh to” dialog.  This parses $HOME/.ssh/known_hosts to
+#                           provide host auto-completion.  ssh(1) will be executed via the
+#                           configured terminal emulator.
+#	CM-w            Spawn “exec WindowManager” dialog; allows you to switch from
+#                           cwm to another window manager without restarting the X server.
+#	CMS-r           Restart the running cwm(1).
+#	CMS-q           Quit cwm.
+
+## Key bindings
+
+  # bind CMS-q unmap
+  # bind CM-q quit
+    bind CM-Return unmap
+	bind M-Return urxvt 
+	bind CM-x unmap
+	bind M-q delete
+	bind M-r unmap
+	bind M-r exec
+	bind M-p "dmenu_run -b -fn '-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*' -nb '#000000' -nf '#555555' -sb '#000000' -sf '#d9d9d9'"
+	bind CMS-l label
+	bind CM-f unmap
+	bind M-f maximize 
+	bind M-t "urxvt -e mutt"
+	bind M-e "urxvt -e vi .cwmrc"
+	bind MS-m menusearch
+	bind MS-plus "amixer set Master 5.0%+"
+	bind MS-minus "amixer set Master 5.0%-"
+	bind MS-F8 "amixer set Master toggle"
+    bind M-s osd 
+    bind M-F2 bbqrun
+    bind 4-s /home/dkeg/shells
+
+	bind 4-o unmap
+	bind CM-equal unmap	
+	bind M-backslash vmaximize
+	bind CMS-equal unmap	
+	bind M-minus hmaximize
+	bind M-1 grouponly1
+	bind M-2 grouponly2
+	bind M-3 grouponly3
+	bind M-4 grouponly4
+	bind MS-1 movetogroup1
+	bind MS-2 movetogroup2
+	bind MS-3 movetogroup3
+	bind MS-4 movetogroup4
+
+	mousebind M-2 window_lower
+	mousebind M-3 window_resize
+
+## Application menu
+
+	command file "urxvt -g 84x18+50-20 -e mc" 
+	command music "urxvt -g 84x14+50+270 -e mocp" 
+	command irc "urxvt -g 84x18-50-20 -e irssi"
+	command mail "urxvt -g 84x18-50+15 -e mutt"
+	command htop "urxvt -g 84x18+50+15 -e htop"
+	command news "urxvt -g 84x18+50+270 -e newsbeuter"
+	command browser iceweasel	
+	command clib "xlinks2 -g www.duckduckgo.com"
+           
+## Fonts, Style, Color
+
+    fontname "terminus:pixelsize=10"
+    color menubg "#000000"
+    color font "#d7d7d7"
+
+	borderwidth 4 
+    color inactiveborder   "#1A1A1A"
+    color activeborder   "#1A1A1A"
+    gap 22 6 6 6  #[T,B,L,R] 
+          
+## Ignore programs; no borders
+
+	ignore xclock
+
+## Groups predefined - MOD+[number].  In this case ALT+[number]
+
+	autogroup 1 "urxvt"
+	autogroup 1 "xterm"
+    autogroup 2 "Navigator,Iceape"
+	autogroup 2 "Navigator,Iceweasel"
+	autogroup 2 "Chromium"
+	autogroup 2 "Roaster"
+	autogroup 2 "Dwb"
+	autogroup 3 "mplayer2"
+    autogroup 4 "Leafpad"   
+
+## Tiling
+	bind MC-z 	htile
+	bind 4S-v	vtile	
+
+## Mousebindings
+	mousebind CM-1 	window_resize
+	mousebind M-1  	window_move
+
+    snapdist 4 
+
+## pointer movement
+    bind 4-j ptrmovedown 
+    bind 4S-j bigptrmovedown 
+    bind 4-k ptrmoveup 
+    bind 4S-k bigptrmoveup 
+    bind 4-h ptrmoveleft 
+    bind 4S-h bigptrmoveleft 
+    bind 4-l ptrmoveright 
+    bind 4S-l bigptrmoveright 
+
+## Window movement (standard bindings)
+    bind M-h moveleft
+    bind MS-h bigmoveleft
+    bind M-j movedown
+    bind MS-j bigmovedown
+    bind M-k moveup
+    bind MS-k bigmoveup
+    bind M-l moveright 
+    bind MS-l bigmoveright 
+
+## Window resizing
+    bind MC-h resizeleft
+    bind MCS-h bigresizeleft
+    bind MC-j resizedown
+    bind MCS-j bigresizedown
+    bind MC-k resizeup
+    bind MCS-k bigresizeup
+    bind MC-l resizeright
+    bind MCS-l bigresizeright
+
+################################### END ##############################

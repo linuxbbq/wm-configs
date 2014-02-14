@@ -1,0 +1,130 @@
+# gray-themed twmrc file - rename to ~/.twmrc before using
+
+# this file is provided with NO GUARANTEE and NO SUPPORT
+# if it does not do what you want, FIX IT YOURSELF
+
+TitleFont "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+ResizeFont "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+MenuFont "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+IconFont "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+IconManagerFont "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+IconManagerGeometry "800x800" 10
+#ShowIconManager
+
+NoTitleHighlight
+AutoRelativeResize
+DontMoveOff
+WarpCursor
+NoHighlight
+NoMenuShadows
+BorderWidth 2
+ButtonIndent 1
+FramePadding 0
+IconBorderWidth 1
+MenuBorderWidth 1
+TitleButtonBorderWidth 1
+TitlePadding 8
+#SqueezeTitle
+#RandomPlacement
+IconManagerDontShow { "Conky" }
+OpaqueMove
+Zoom
+
+NoTitle
+{
+"Conky"
+"oclock"
+"xclock"
+"TWM Icon Manager"
+"tint2"
+}
+ 
+Color
+{
+BorderColor "gray25"
+BorderTileBackground "gray10"
+BorderTileForeground "gray25"
+DefaultBackground "gray10"
+DefaultForeground "gray25"
+TitleBackground "gray40"
+#TitleBackground "blue"
+TitleForeground "white"
+MenuBackground "gray40"
+MenuForeground "white"
+MenuBorderColor "gray25"
+MenuTitleBackground "gray20"
+MenuTitleForeground "white"
+IconBackground "gray10"
+IconForeground "gray75"
+IconBorderColor "gray75"
+IconManagerBackground "gray10"
+IconManagerForeground "gray70"
+IconManagerHighlight "gray75"
+}
+     
+#
+# functions for motion-based actions.
+#
+MoveDelta 3
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+Button1 = : root : f.menu "windowops"
+Button3 = : root : f.menu "main"
+ 
+Button1 = m4 : window : f.function "move-or-raise"
+Button3 = m4 : window : f.resize
+ 
+Button1 = : title : f.function "move-or-raise"
+Button3 = : title : f.raiselower
+ 
+Button1 = : icon : f.function "move-or-iconify"
+ 
+Button1 = : iconmgr : f.raise
+Button3 = : iconmgr : f.delete
+
+"Tab" = m1 	: all 	: f.circleup
+
+"t" =	m4	: all	: f.exec "x-terminal-emulator &"
+"q"	=	m4	: all	: f.restart
+"F3" =	m1	: all	: f.exec "dmenu_run &"
+"F3" =	m4	: all	: f.exec "dmenu_run &"
+"p" =	m4	: all	: f.exec "dmenu_run &"
+
+"Left" = 	m4 	: all 	: f.backiconmgr
+"Right" = 	m4 	: all   : f.forwiconmgr
+ 
+menu "main"
+{
+"terminal"	f.exec "urxvt &"
+"web"		f.exec "urxvt -e w3m linuxbbq.org &"
+"files"		f.exec "urxvt -e ranger &"
+"music"		f.exec "urxvt -e mocp &"
+"restart"	f.restart
+"exit"  	f.menu "quit"
+}
+
+menu "quit"
+{
+"restart"  f.restart
+"quit"     f.quit
+}
+ 
+menu "windowops"
+{
+"Iconify" f.iconify
+"Resize"  f.resize
+"V-Max"   f.zoom
+"H-Max"   f.hzoom
+"F-Max"   f.fullzoom
+"Move"    f.move
+"Raise"   f.raise
+"Lower"   f.lower
+""        f.nop
+"Focus"   f.focus
+"Unfocus" f.unfocus
+""        f.nop
+"Delete"  f.delete
+"Destroy" f.destroy
+} 

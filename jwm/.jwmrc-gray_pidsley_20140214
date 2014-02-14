@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+
+<!-- gray-themed jwmrc file - rename to ~/.jwmrc before using
+        this file is provided with NO GUARANTEE and NO SUPPORT
+        if it breaks or does not do what you want, FIX IT YOURSELF  -->
+
+ <JWM>
+        <StartupCommand>
+        </StartupCommand>
+
+    <!-- The root menu, if this is undefined you will not get a menu. -->
+    <!-- Additional RootMenu attributes: onroot, labeled, label -->
+    <RootMenu height="15" onroot="123">
+		<Program label="terminal">urxvt</Program>
+		<Program label="web">x-www-browser</Program>
+		<Program label="music">urxvt -e mocp</Program>
+		<Program label=".jwmrc">urxvt -e vim ~/.jwmrc</Program>
+		<Separator/>
+		<Menu label="applications">
+		</Menu>
+		<Menu label="sound">
+			<Program label="mocp">urxvt -e mocp</Program> 
+			<Program label="alsamixer">urxvt -e alsamixer</Program>
+		</Menu>
+        <Separator/>
+		<Restart label="restart" icon="restart.png"/>
+		<Exit label="exit" confirm="true" icon="exit.png"/>
+		<Program label="shutdown" confirm="false" icon="exit.png">
+			/home/bsh/.scripts/scrotwm-shutdown
+		</Program>
+    </RootMenu>
+ 
+<!-- Visual Styles -->
+
+   <WindowStyle>
+
+      <Font>liberation.sans-8</Font>
+      <Width>3</Width>
+      <Height>16</Height>
+
+      <Active>
+         <Text>white</Text>
+         <Title>#4b4b4b:#3c3c3c</Title>
+         <Outline>#3c3c3c</Outline>
+      </Active>
+
+      <Inactive>
+         <Text>#9c9c9c</Text>
+         <Title>#4b4b4b:#3c3c3c</Title>
+         <Outline>#3c3c3c</Outline>
+      </Inactive>
+
+   </WindowStyle>
+
+   <TaskListStyle>
+      <Font>liberation.sans-8</Font>
+      <ActiveForeground>white</ActiveForeground>
+      <ActiveBackground>#4b4b4b:#3c3c3c</ActiveBackground>
+      <Foreground>#808080</Foreground>
+      <Background>#3c3c3c:#4b4b4b</Background>
+   </TaskListStyle>
+
+   <!-- Additional TrayStyle attribute: insert -->
+   <TrayStyle>
+      <Font>liberation.sans-8</Font>
+      <Foreground>white</Foreground>
+      <Background>#3c3c3c</Background>
+   </TrayStyle>
+
+   <PagerStyle>
+      <Outline>#4b4b4b</Outline>
+      <Foreground>#3c3c3c</Foreground>
+      <Background>black</Background>
+      <ActiveForeground>white</ActiveForeground>
+      <ActiveBackground>#3c3c3c</ActiveBackground>
+   </PagerStyle>
+
+   <MenuStyle>
+      <Font>liberation.sans-8</Font>
+      <Foreground>white</Foreground>
+      <Background>#3c3c3c</Background>
+      <ActiveForeground>white</ActiveForeground>
+      <ActiveBackground>#747474:#656565</ActiveBackground>
+   </MenuStyle>
+
+   <PopupStyle>
+      <Font>liberation.sans-8:weight=bold</Font>
+      <Outline>#3c3c3c</Outline>
+      <Foreground>white</Foreground>
+      <Background>#3c3c3c</Background>
+   </PopupStyle>
+
+   <IconPath>
+      $HOME/.icons
+   </IconPath>
+
+    <Desktops width="2">
+ 		<Desktop name="here"></Desktop>
+ 		<Desktop name="there"></Desktop>
+    </Desktops>
+ 
+    <DoubleClickSpeed>400</DoubleClickSpeed>
+ 
+    <DoubleClickDelta>2</DoubleClickDelta>
+ 
+    <FocusModel>sloppy</FocusModel>
+ 
+    <SnapMode>none</SnapMode> 
+	
+    <MoveMode>outline</MoveMode>
+     
+    <ResizeMode>opaque</ResizeMode>
+ 
+    <Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="h">left</Key>
+    <Key key="j">down</Key>
+    <Key key="k">up</Key>
+    <Key key="l">right</Key>
+    <Key key="Return">select</Key>
+    <Key key="Escape">escape</Key>
+
+    <Key mask="A" key="Tab">next</Key>
+ 
+    <Key mask="A" key="F4">close</Key>
+    <Key mask="A" key="#">desktop#</Key>
+    <Key mask="A" key="F1">root:1</Key>
+    <Key mask="A" key="F2">window</Key>
+    
+    <Key mask="A" key="F3">exec:dmenu_run</Key>
+    <Key mask="4" key="F3">exec:dmenu_run</Key>
+    <Key mask="4" key="p">exec:dmenu_run</Key>
+    <Key mask="4" key="t">exec:urxvt</Key>
+
+	<Tray  x="0" y="-1" height="32" autohide="false">
+
+      <TrayButton label="JWM">root:1</TrayButton>
+
+      <TrayButton label="_">showdesktop</TrayButton>
+
+      <Pager labeled="true"/>
+
+      <TaskList maxwidth="256"/>
+
+      <Swallow name="xload" width="64">
+         xload -nolabel -bg black -fg red -hl white
+      </Swallow>
+
+      <Clock format="%l:%m %p">xclock</Clock>
+
+   </Tray>
+</JWM>
+ 
+ 

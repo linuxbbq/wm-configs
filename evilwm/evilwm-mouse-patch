@@ -1,0 +1,17 @@
+# patch mouse button 3 to work as resize button (like cwm)
+# move button 2 to lower
+
+--- events.c	2013-10-14 07:53:31.564135579 -0700
++++ events.c	2013-10-14 07:55:07.848278343 -0700
+@@ -177,9 +177,9 @@
+ 		switch (e->button) {
+ 			case Button1:
+ 				drag(c); break;
+-			case Button2:
+-				sweep(c); break;
+ 			case Button3:
++				sweep(c); break;
++			case Button2:
+ 				client_lower(c); break;
+ 			default: break;
+ 		}

@@ -1,0 +1,112 @@
+
+cmd "st" "st"
+end
+
+key alt		Pointer_Button1	drag,raise
+key alt		Pointer_Button2	drag,raise			   1
+key alt		Pointer_Button3	drag,raise			   1
+
+key alt		Return		menu				   -1
+
+key alt		1		pan,view,abs,popup		   0   0
+key alt		2		pan,view,abs,popup		   1   0
+key alt		3		pan,view,abs,popup		   0   1
+key alt		4		pan,view,abs,popup		   1   1
+key alt		5		pan,view,abs,popup		   2   0
+key alt		6		pan,view,abs,popup		   0   2
+key alt		7		pan,view,abs,popup		   2   1
+key alt		8		pan,view,abs,popup		   1   2
+key alt		9		pan,view,abs,popup		   2   2
+key alt		Left		pan,view,popup			  -4   0
+key alt		Right		pan,view,popup			   4   0
+key alt		Up		pan,view,popup			   0  -4
+key alt		Down		pan,view,popup			   0   4
+
+key alt		Tab		next,focus,raise,set_view,mouse,popup
+key alt,shift	Tab		next,focus,raise,set_view,mouse,popup	  1
+key shift	Caps_Lock	circulate,focus,raise,set_view,mouse	299  0
+key 0		Caps_Lock	circulate,focus,raise,set_view,mouse	  3  200
+key alt		Caps_Lock	next,focus,raise,mouse,popup,local
+key alt,shift	q		circulate,focus,raise,set_view,mouse	299  0
+key alt		q		circulate,focus,raise,set_view,mouse	  3  200
+
+key alt		h		hist,focus,raise,set_view,mouse	-1   0
+key alt,shift	h		hist,focus,raise,set_view,mouse	 1   0
+
+key alt		b		view_hist	-1   0
+key alt,shift	b		view_hist	 1   0
+
+key alt,shift	e		resize,raise,mouse		   0 -16
+key alt,shift	x		resize,raise,mouse		   0  16
+key alt,shift	s		resize,raise,mouse		 -16   0
+key alt,shift	d		resize,raise,mouse		  16   0
+
+key alt		e		move,raise,mouse		   0 -16
+key alt		x		move,raise,mouse		   0  16
+key alt		s		move,raise,mouse		 -16   0
+key alt		d		move,raise,mouse		  16	 0
+key alt		w		move,raise,mouse,abs		   0	 0
+key alt		z		move,raise,mouse,abs		   0	-1
+key alt		r		move,raise,mouse,abs		  -1	 0
+key alt		c		move,raise,mouse,abs		  -1	-1
+
+key alt,shift	1		move,view,abs		   0   0
+key alt,shift	2		move,view,abs		   1   0
+key alt,shift	3		move,view,abs		   0   1
+key alt,shift	4		move,view,abs		   1   1
+key alt,shift	5		move,view,abs		   2   0
+key alt,shift	6		move,view,abs		   0   2
+key alt,shift	7		move,view,abs		   2   1
+key alt,shift	8		move,view,abs		   1   2
+key alt,shift	9		move,view,abs		   2   2
+key alt,shift	Left		move,view		  -1   0
+key alt,shift	Right		move,view		   1   0
+key alt,shift	Up		move,view		   0  -1
+key alt,shift	Down		move,view		   0   1
+
+key alt		Escape		kill
+key alt,shift	Escape		kill,abs
+
+key alt		a		maxim,raise,mouse
+key alt		f		fix
+
+key alt		i		info,raise,mouse
+key 0		F15		raise
+key alt		Insert		lower
+key 0		F17		lower
+
+key alt		g		next_screen
+
+xact enter,focus
+xact new,focus,raise,mouse   200
+xact deleted,focus,mouse
+
+lock "true"
+
+# Sith'ish color scheme:
+cb "1a1a1a"
+
+cc "#bf1e2d"
+
+ce "#333"
+cf "#d3d3d3"
+
+cg "#bf1e2d"
+
+ch "#442"
+ci "white"
+
+
+# Not that sith'ish?
+# This is for all you dark on light people out there:
+# cb "white"
+
+# cc "#ffefaf"
+
+# ce "#ccc"
+# cf "black"
+
+# cg "#ffefaf"
+
+# ch "#ffefaf"
+# ci "black"

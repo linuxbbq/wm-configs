@@ -3,4 +3,4 @@ evilwm configs
 
 .evilwmrc_ivan_2014_0214: (short description goes here)
 
-evilwm-mouse-patch:	switch button 3 to work as resize (like cwm)
+evilwm-mouse-patch:	switch button 3 to work as resize

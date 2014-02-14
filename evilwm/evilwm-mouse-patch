@@ -1,4 +1,4 @@
-# patch mouse button 3 to work as resize button (like cwm)
+# patch mouse button 3 to work as resize button
 # move button 2 to lower
 
 --- events.c	2013-10-14 07:53:31.564135579 -0700

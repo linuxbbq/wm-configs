@@ -2,17 +2,17 @@
 
 
 ====config.h_dkeg_20140213: Config includes uselessgaps 
-* Alt=Mod1  
-* win=Mod4  
-* Mod1=Mod  
-* Kill Xsession ................ Ctrl - Alt - r  
-* Kill application ............... Ctrl-Shift-c
-* Open Terminal ............. Alt Shift - Enter   
-* Open dmenu .......................... Win - v   
-* Floating .................... Alt - Shift - f   
-* Tiling ...................... Alt - Shift - t  
-* Bottom Tile ................. Alt - Shift - b  
-* Grid ......................... Alt - Shift -g  
-* Volume Up ..................... Win - Shift -  
-* Volume Down ................... Win - Shift +  
+ * Alt=Mod1  
+ * win=Mod4  
+ * Mod1=Mod  
+ * Kill Xsession ................ Ctrl - Alt - r  
+ * Kill application ............... Ctrl-Shift-c
+ * Open Terminal ............. Alt Shift - Enter   
+ * Open dmenu .......................... Win - v   
+ * Floating .................... Alt - Shift - f   
+ * Tiling ...................... Alt - Shift - t  
+ * Bottom Tile ................. Alt - Shift - b  
+ * Grid ......................... Alt - Shift -g  
+ * Volume Up ..................... Win - Shift -  
+ * Volume Down ................... Win - Shift +  
 

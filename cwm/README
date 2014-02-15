@@ -1,6 +1,13 @@
 cwm (calm window manager) configurations
 =====
 
-.cwmrc_dkeg_20140213 (short description goes here)
+====.cwmrc_dkeg_20140213
+ * A bit bloated
+ * Shows many of the possible options  
+ * Alt=Mod1; M=Mod1  
+ * M+Enter for urxvt  
+ * M+p for dmenu  
+ * Other than that, config is straight forward  
 
-.cwmrc_pidsley_20140214	minimal cwm config, mod4 bindings
+====.cwmrc_pidsley_20140214	
+ * Minimal cwm config, mod4 bindings

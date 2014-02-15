@@ -11,3 +11,6 @@ cwm (calm window manager) configurations
 
 ====.cwmrc_pidsley_20140214	
  * Minimal cwm config, mod4 bindings
+
+====.cwmrc_joe_20140216
+ * cwm config, emacs keybind friendly

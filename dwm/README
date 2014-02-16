@@ -1,6 +1,8 @@
 dwm configs
 =====
 
-config.h_ivan_2014_0216: unpatched dwm configuration with description for colors and borders using my preferred apps and window rules 
-
-.jd.sh: script for downloading and running JDownloader
+====config.h_ivan_2014_0216 
+* unpatched dwm configuration with 
+* description for colors and borders using 
+* my preferred apps and window rules 
+* .jd.sh: script for downloading and running JDownloader

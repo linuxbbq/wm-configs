@@ -1,0 +1,20 @@
+# basic ratpoison config
+
+# this file is provided with NO GUARANTEE and NO SUPPORT
+# if it does not do what you want, FIX IT YOURSELF
+
+exec conky -c /media/shared/conky/conkyrc-top
+
+set padding 0 15 0 0
+set font Mono-10
+set bargravity nw
+startup_message off
+msgwait 2
+
+set bgcolor #000000
+set fgcolor #CCCCCC
+set bwcolor #272727
+set fwcolor #000077
+
+source /home/pidsley/.ratpoisonkeys
+

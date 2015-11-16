@@ -4,6 +4,16 @@
 (require 'sawfish.wm.tile.tile)
 (unbind-keys window-keymap "W-Down" "W-Up")
 
+;; iswitch
+(require 'iswitch-window)
+(bind-keys global-keymap "W-s" 'iswitch-window)
+
+;; Run app using something like dmenu for sawfish
+(require 'sawfish.wm.util.prompt)
+(require 'sawfish.wm.ext.run-application)
+(bind-keys global-keymap
+           "W-e" 'run-application)
+
 (bind-keys global-keymap
            "W-S-Up"    'send-to-previous-workspace
            "W-S-Down"  'send-to-next-workspace
@@ -21,8 +31,6 @@
            "W-S-3"      '(send-to-workspace 3)
            "W-S-4"      '(send-to-workspace 4))
 
-(require 'iswitch-window)
-(bind-keys global-keymap "W-s" 'iswitch-window)
 
 ;; Paste using keyboard. Unfortunately, it doesn't work for emacs and xterm.
 ;; TODO: Find something better - maybe something that will paste by inserting
@@ -96,3 +104,8 @@
 ;; Custom menu
 (bind-keys root-window-keymap "button3-click1" '(popup-root-menu))
 (defvar-setq apps-menu-autogen nil)
+
+;; Look and feel
+;; Wallpapers, set wallpapers by changing the path to your wallpaper
+;;(require 'sawfish.wm.ext.wallpaper)
+;;(system "hsetroot -tile ~/images/whatever/tiled_whatever.png &")

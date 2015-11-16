@@ -1,0 +1,10 @@
+;; sawfish user customization -- do not edit by hand!
+;; sawfish version 1.5.3, written Thu Nov  5 15:46:30 2015
+
+(custom-set-typed-variable (quote SawthenaForever:normal-text-color) (quote "#8d008b008f00") (quote (optional color)))
+(custom-set-typed-variable (quote default-font) (quote ("Pango" . "Raleway Medium 10")) (quote font))
+(custom-set-typed-variable (quote SawthenaForever:active-text-color) (quote "#ed00eb00d300") (quote (optional color)))
+(custom-set-typed-variable (quote SawthenaForever:normal-color) (quote "#d900c500a100") (quote (optional color)))
+(custom-set-typed-variable (quote SawthenaForever:active-color) (quote "#6b0062005400") (quote (optional color)))
+(custom-set-typed-variable (quote SawthenaForever:text-justify) (quote center) (quote (choice left right center)))
+(custom-set-typed-variable (quote default-frame-style) (quote SawthenaForever) (quote frame-style))

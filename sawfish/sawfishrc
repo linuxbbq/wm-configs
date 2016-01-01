@@ -1,0 +1,111 @@
+;; Franksinistra's debloated sawfish configs.
+
+(require 'paste)
+(require 'sawfish.wm.tile.tile)
+(unbind-keys window-keymap "W-Down" "W-Up")
+
+;; iswitch
+(require 'iswitch-window)
+(bind-keys global-keymap "W-s" 'iswitch-window)
+
+;; Run app using something like dmenu for sawfish
+(require 'sawfish.wm.util.prompt)
+(require 'sawfish.wm.ext.run-application)
+(bind-keys global-keymap
+           "W-e" 'run-application)
+
+(bind-keys global-keymap
+           "W-S-Up"    'send-to-previous-workspace
+           "W-S-Down"  'send-to-next-workspace
+           "W-v"       'maximize-fill-window-vertically-toggle
+           "W-h"       'maximize-fill-window-horizontally-toggle
+           "W-x"       'call-command
+           "W-Down"    'next-workspace
+           "W-Up"      'previous-workspace
+           "W-1"      '(activate-workspace 1)
+           "W-2"      '(activate-workspace 2)
+           "W-3"      '(activate-workspace 3)
+           "W-4"      '(activate-workspace 4)
+           "W-S-1"      '(send-to-workspace 1)
+           "W-S-2"      '(send-to-workspace 2)
+           "W-S-3"      '(send-to-workspace 3)
+           "W-S-4"      '(send-to-workspace 4))
+
+
+;; Paste using keyboard. Unfortunately, it doesn't work for emacs and xterm.
+;; TODO: Find something better - maybe something that will paste by inserting
+;; characters.
+;; (require 'keyboard-paste)
+;; (bind-keys global-keymap
+;;            "W-Return" 'keyboard-paste
+;;            "W-BS"     'clear-selection)
+
+(require 'focus-by-direction)
+(defvar dir-focus-keymap
+  (bind-keys (make-keymap)
+             "k" 'focus-north
+             "j" 'focus-south
+             "h" 'focus-west
+             "l" 'focus-east))
+(bind-keys global-keymap
+           "W-f" 'dir-focus-keymap)
+
+(require 'alignr)
+(defvar alignr-move-keymap
+  (bind-keys (make-keymap)
+             "h" 'alignr-move-window-left
+             "l" 'alignr-move-window-right
+             "k" 'alignr-move-window-up
+             "j" 'alignr-move-window-down))
+(defvar alignr-grow-keymap
+  (bind-keys (make-keymap)
+             "h" 'alignr-grow-window-on-left
+             "l" 'alignr-grow-window-on-right
+             "k" 'alignr-grow-window-on-up
+             "j" 'alignr-grow-window-on-down))
+(defvar alignr-shrink-keymap
+  (bind-keys (make-keymap)
+             "h" 'alignr-shrink-window-from-left
+             "l" 'alignr-shrink-window-from-right
+             "k" 'alignr-shrink-window-from-up
+             "j" 'alignr-shrink-window-from-down))
+(bind-keys global-keymap
+           "W-m" 'alignr-move-keymap)
+(bind-keys global-keymap
+           "W-." 'alignr-grow-keymap)
+(bind-keys global-keymap
+           "W-," 'alignr-shrink-keymap)
+(defvar window-pack-keymap
+  (bind-keys (make-keymap)
+             "h"  'pack-window-left
+             "l" 'pack-window-right
+             "k"    'pack-window-up
+             "j"  'pack-window-down))
+(bind-keys global-keymap
+           "W-S-m" 'window-pack-keymap)
+
+
+;; Tiling Keybinds
+(tall-tiling 0 #:width 1.25 #:top 10 #:bottom 10 #:gap 10 #:max 3)
+(col-tiling 0 #:top 10 #:bottom 10 #:gap 10 #:cols 3)
+(bind-keys global-keymap
+		"C-S-KP_Add" 'increase-max-windows
+		"C-S-KP_Subtract" 'decrease-max-windows
+		"C-M-KP_Add" 'increase-cols
+		"C-M-KP_Subtract" 'decrease-cols
+		"C-M-h" 'tall-rotate-right
+		"C-M-l" 'tall-rotate-left
+		"W-t" 'next-tiling)
+
+;; load app menu
+;; TODO: need to generate custom menu, so far it hasn't been working.
+(require 'init-menu)
+
+;; Custom menu
+(bind-keys root-window-keymap "button3-click1" '(popup-root-menu))
+(defvar-setq apps-menu-autogen nil)
+
+;; Look and feel
+;; Wallpapers, set wallpapers by changing the path to your wallpaper
+;;(require 'sawfish.wm.ext.wallpaper)
+;;(system "hsetroot -tile ~/images/whatever/tiled_whatever.png &")

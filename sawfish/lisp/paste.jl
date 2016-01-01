@@ -1,0 +1,12 @@
+(require 'sawfish.wm.util.selection)
+(define (send-string-to-window s w)
+  (let ((i 0))
+    (while (< i (length s))
+           (let* ((ch (substring s i (setq i (1+ i))))
+                  (e (cond ((equal ch "\n") "RET")
+                           (t ch))))
+             (synthesize-event e w)))))
+(defun send-selection (window)
+  (interactive "%W")
+  (send-string-to-window
+    (x-get-selection 'PRIMARY) window))

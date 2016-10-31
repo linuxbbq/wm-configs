@@ -25,9 +25,6 @@
         <Separator/>
 		<Restart label="restart" icon="restart.png"/>
 		<Exit label="exit" confirm="true" icon="exit.png"/>
-		<Program label="shutdown" confirm="false" icon="exit.png">
-			/home/bsh/.scripts/scrotwm-shutdown
-		</Program>
     </RootMenu>
  
 <!-- Visual Styles -->

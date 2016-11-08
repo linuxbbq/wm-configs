@@ -1,0 +1,73 @@
+*button.pressed.appearance: sunken solid
+*button.pressed.backgroundColor: darkgrey
+*button.appearance: parentrelative
+*button.foregroundColor: black
+
+*backgroundColor: rgb:00/00/00
+*color1: rgb:ff/ff/ff
+*color2: rgb:ee/ee/e7
+
+*font: Terminus-10
+
+*borderColor: white
+*borderWidth: 1
+*marginWidth: 1
+
+menu.title.appearance: flat solid border
+menu.title.backgroundColor: black
+menu.title.foregroundColor: white
+menu.title.textColor: white
+menu.title.alignment: center
+menu.title.font: Terminus-10:style=Bold
+
+menu.frame.appearance: flat solid border
+menu.frame.textColor: white
+menu.frame.foregroundColor: black
+menu.frame.disabledColor: darkgrey
+menu.frame.alignment: left
+
+menu.active.appearance: flat solid border
+menu.active.backgroundColor: white
+menu.active.foregroundColor: black
+menu.active.textColor: black
+
+rootCommand: bsetroot -solid rgb:00/00/00
+
+slit.appearance: flat solid
+slit.backgroundColor: rgb:00/00/00
+slit.marginWidth: 3
+
+toolbar.appearance: flat solid
+toolbar.alignment: center
+toolbar*textColor: white
+toolbar.label.appearance: parentrelative
+toolbar.clock.appearance: parentrelative
+toolbar.windowLabel.appearance: parentrelative
+
+window.title.focus.appearance: flat solid border
+window.title.focus.color1: black
+window.title.focus.color2: white
+window.title.unfocus.appearance: flat solid border
+
+window.label.focus.appearance: parentrelative
+window.label.focus.textColor: white
+window.label.unfocus.appearance: parentrelative
+window.label.unfocus.textColor: darkgrey
+window.label.marginWidth: 1
+
+window.button.focus.appearance: parentrelative
+window.button.focus.foregroundColor: white
+
+window.button.unfocus.appearance: parentrelative
+window.button.unfocus.foregroundColor: darkgrey
+
+window.handle.focus.appearance: flat solid border
+window.handle.unfocus.appearance: flat solid border
+
+window.grip.focus.appearance: flat solid border
+window.grip.focus.backgroundColor: rgb:ff/ff/ff
+window.grip.unfocus.appearance: flat solid border
+
+window*alignment: center
+window.font: Terminus-9:style=Bold
+window.handleHeight: 4
